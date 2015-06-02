@@ -10,6 +10,6 @@ defmodule Unicast do
 
   channel :chn, key: {:addr, :id}, val: :val
   table :sbuf, key: :id, val: {:addr, :val}
-  table :rbuf, key: :id, val: sbuf.schema
+  table :rbuf, sbuf.schema
 
 end
